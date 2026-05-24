@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import type { Match } from '@/lib/matches';
-import type { TournamentBet, TopScorerBet } from '@/lib/matches';
+interface TournamentBet { id: string; team: string; flag: string; odds: number; }
+interface TopScorerBet { id: string; player: string; team: string; flag: string; odds: number; }
+
 
 interface AppData {
   matches: Match[];
